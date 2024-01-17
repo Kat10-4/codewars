@@ -13,12 +13,11 @@
 function wordsToObject(input) {
   input = input.split(/\s/);
   let result = [];
-  let obj = { name: "", id: "" };
   for (let i = 0; i < input.length; i += 2) {
-    let obj = { name: input[i], id: input[i + 1] };
+    let obj = { name: input[i], id: Number(input[i + 1]) };
     result.push(obj);
   }
-  return result.toString();
+  return JSON.stringify(result);
 }
 
 console.log(wordsToObject("red 1 yellow 2 black 3 white 4"));
