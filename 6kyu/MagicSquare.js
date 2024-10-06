@@ -66,7 +66,7 @@ function formingMagicSquare(s) {
         }
         allPosibleAnswers.push(currentAnswer)
     }
-    return Math.min(...allPosibleAnswers) ?? 0
+    return Math.min(...allPosibleAnswers) || 0
 }
 
 console.log(formingMagicSquare([[4, 9, 2], [3, 5, 7], [8, 1, 5]]))
