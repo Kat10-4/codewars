@@ -27,17 +27,38 @@
 //     NOTE: There will also be lists tested of lengths upwards of 10,000,000 elements. Be sure your code doesn't time out.
 
 
-var sum_pairs = function (ints, s) {
-    const intsSet = new Set();
-    for (let i = 0; i < ints.length; i++) {
-        let currInt = ints[i];
-        if (intsSet.has(s - currInt)) {
-            return [s - currInt, currInt];
-        } else {
-            intsSet.add(currInt);
+// var sum_pairs = function (ints, s) {
+//     const intsSet = new Set();
+//     for (let i = 0; i < ints.length; i++) {
+//         let currInt = ints[i];
+//         if (intsSet.has(s - currInt)) {
+//             return [s - currInt, currInt];
+//         } else {
+//             intsSet.add(currInt);
+//         }
+//     }
+// }
+//
+// console.log(sum_pairs([10, 6, 2, 3, 4, 7], 10))
+
+function fizzBuzz(n) {
+    for(let i=1;i<=n;i++){
+let div3=i%3
+let div5=i%5
+        console.log('3 = '+div3)
+        console.log('5 = '+div5)
+
+        if(i%3===0 && i%5===0){
+            console.log('FizzBuzz')
+        } else if(i%3===0){
+            console.log('Fizz')
+        }else if(i%5===0){
+            console.log('Fizz')
+        }else{
+            console.log(i)
         }
     }
 }
 
-console.log(sum_pairs([10, 6, 2, 3, 4, 7], 10))
+fizzBuzz(15)
 
